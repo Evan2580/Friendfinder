@@ -13,9 +13,14 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/media-queries.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
-
   <!-- Script= -->
-
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
   <!--<script src="js/modernizr.js"></script>-->
 
 
@@ -24,23 +29,25 @@
 
 <body>
 
-    <a href="#modal-01" title="Best Friends">
-      <img alt="" src=""><!--need to add image-->
-      <div class="overlay">
-        <div class="portfolio-item-meta">
-          <h5>Were Best Friends</h5>
-          <p>Now that were best friends lets meet</p>
-        </div>
+  <a href="#modal-01" title="Best Friends">
+    <img alt="" src="">
+    <!--need to add image-->
+    <div class="overlay">
+      <div class="portfolio-item-meta">
+        <h5>Were Best Friends</h5>
+        <p>Now that were best friends lets meet</p>
       </div>
-      <div class="link-icon"><i class="icon-plus"></i></div>
-    </a>
+    </div>
+    <div class="link-icon"><i class="icon-plus"></i></div>
+  </a>
 
   </div>
   </div> <!-- Hidden modal end -->
 
   <div id="modal-01" class="popup-modal mfp-hide">
 
-    <img class="scale-with-grid" src="" alt="" /> <!--need to add image alt tag-->
+    <img class="scale-with-grid" src="" alt="" />
+    <!--need to add image alt tag-->
 
     <div class="description-box">
       <h4>Best Friends</h4>
@@ -57,27 +64,27 @@
 
 
   <script type="text/javascript">
-    $(".submit").on("click", function (event) {
+    $("#submit").on("click", function (event) {
       event.preventDefault();
+      var answers = [q1, q2, ];
       // Here we grab the form elements
       var userEntry = {
         userName: $("#user-name").val().trim(),
         userPhoto: $("#photo-link").val().trim(),
-        userScores: $("#user-scores").val().trim(),
-
+        userScores: answers
+        //parseInt
       };
       console.log(userEntry);
 
       $.post("/api/friends", userEntry,
         function (user) {
-          
+
           if (user) {
             alert("Yay! You found a new  match"); // this is where we need the modal to pop up
 
             $('#modal-01').modal('mfp-show')
 
-          }
-          else {
+          } else {
             alert("New user was not added.");
           }
           // Clear the form when submitting
