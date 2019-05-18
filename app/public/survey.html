@@ -1,1 +1,90 @@
+<!DOCTYPE html>
 
+<head>
+  <meta charset="utf-8">
+  <title>Evan Ahmed's FriendFinder</title>
+  <meta name="description" content="Evan's best FriendFinder">
+  <meta name="author" content="Evan Ahmed">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!--CSS-->
+
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <!-- Script= -->
+
+  <!--<script src="js/modernizr.js"></script>-->
+
+
+
+</head>
+
+<body>
+
+    <a href="#modal-01" title="Best Friends">
+      <img alt="" src=""><!--need to add image-->
+      <div class="overlay">
+        <div class="portfolio-item-meta">
+          <h5>Were Best Friends</h5>
+          <p>Now that were best friends lets meet</p>
+        </div>
+      </div>
+      <div class="link-icon"><i class="icon-plus"></i></div>
+    </a>
+
+  </div>
+  </div> <!-- Hidden modal end -->
+
+  <div id="modal-01" class="popup-modal mfp-hide">
+
+    <img class="scale-with-grid" src="" alt="" /> <!--need to add image alt tag-->
+
+    <div class="description-box">
+      <h4>Best Friends</h4>
+      <p>Now its time to meet our best friend</p>
+      <span class="categories"><i class="fa fa-tag"></i>Evan's FriendFinder</span>
+    </div>
+
+    <div class="link-box">
+      <a href="" target="_blank">Details</a>
+      <a class="popup-modal-dismiss">Close</a>
+    </div>
+
+  </div><!-- modal-01 End -->
+
+
+  <script type="text/javascript">
+    $(".submit").on("click", function (event) {
+      event.preventDefault();
+      // Here we grab the form elements
+      var userEntry = {
+        userName: $("#user-name").val().trim(),
+        userPhoto: $("#photo-link").val().trim(),
+        userScores: $("#user-scores").val().trim(),
+
+      };
+      console.log(userEntry);
+
+      $.post("/api/friends", userEntry,
+        function (user) {
+          
+          if (user) {
+            alert("Yay! You found a new  match"); // this is where we need the modal to pop up
+
+            $('#modal-01').modal('mfp-show')
+
+          }
+          else {
+            alert("New user was not added.");
+          }
+          // Clear the form when submitting
+          $("#user-name").val("");
+          $("#photo-link").val("");
+          $("#user-scores").val("");
+
+        });
+    });
+  </script>
