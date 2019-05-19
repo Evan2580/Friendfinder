@@ -244,12 +244,12 @@
       let question9 = $("input[name='question9']:checked").val();
       let question10 = $("input[name='question10']:checked").val();
       let newFriend = {
-        name: name,
-        photo: image,
-        scores: [question1, question2, question3, question4, question5, question6, question7, question8,
-          question9, question10
+        userName: name,
+        userPhoto: image,
+        userScores: [parseInt(question1), parseInt(question2)
         ]}
-
+        // , parseInt(question3), parseInt(question4), parseInt(question5), parseInt(question6), parseInt(question7), parseInt(question8),
+        //   parseInt(question9), parseInt(question10)
         $.post("/api/friends", newFriend,
         function(response){
                     console.log(response)
@@ -257,8 +257,8 @@
                     $("#responseImg").attr("src", response.photo);
                     $("#responseImg").height("254");
                     $("#responseImg").width("350");
-                    $("#responseModal").modal("show");
-                    $("#submitBtn").attr('disabled', 'disabled');
+                    $("#modal").modal("show");
+                    $("#submit").attr('disabled', 'disabled');
                 })
           // else {
           //   alert("New user was not added.");
