@@ -28,70 +28,244 @@
 </head>
 
 <body>
+  <div class="container">
+    <h2>Survey Questions</h2>
+    <hr>
+    <h3>
+      <strong>About You</strong>
+    </h3>
+    <br>
+    <h5>Name (Required)</h5>
+    <input type="text" id="name" class="form-control">
+    <h5>Link to photo image (Required)</h5>
+    <input type="text" id="photo" class="form-control">
+    <hr>
 
-  <a href="#modal-01" title="Best Friends">
-    <img alt="" src="">
-    <!--need to add image-->
-    <div class="overlay">
-      <div class="portfolio-item-meta">
-        <h5>Were Best Friends</h5>
-        <p>Now that were best friends lets meet</p>
+    <!--End of About you now on to the questions-->
+
+    <h5><strong>Are you Emotional.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question1" value="1">Option 1 (Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question1" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question1" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question1" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question1" value="5">Option 5(Strongly Agree)</label>
       </div>
     </div>
-    <div class="link-icon"><i class="icon-plus"></i></div>
-  </a>
+    <h5><strong>Do you get embarassed?</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question2" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question2" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question2" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question2" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question2" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <!-- <h5><strong>Are you influenced easily.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question3" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question3" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question3" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question3" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question3" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Are you self motivated.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question4" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question4" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question4" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question4" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question4" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Would you like to live somewhere else in the world.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question5" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question5" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question5" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question5" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question5" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Are you athletic.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question6" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question6" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question6" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question6" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question6" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Are you an introvert.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question7" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question7" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question7" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question7" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question7" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Do you fear getting older.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question8" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question8" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question8" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question8" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question8" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Are you stressed.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question9" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question9" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question9" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question9" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question9" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div>
+    <h5><strong>Is this questionnaire html tedious.</strong></h5>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question10" value="1">Option 1(Strongly Disagree)</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="question10" value="2">Option 2</label>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question10" value="3">Option 3</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question10" value="4">Option 4</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="question10" value="5">Option 5(Strongly Agree)</label>
+      </div>
+    </div> -->
+    <button type="button" id="submit" class="btn btn-large btn-primary">Submit</button>
 
   </div>
-  </div> <!-- Hidden modal end -->
 
-  <div id="modal-01" class="popup-modal mfp-hide">
-
-    <img class="scale-with-grid" src="" alt="" />
-    <!--need to add image alt tag-->
-
-    <div class="description-box">
-      <h4>Best Friends</h4>
-      <p>Now its time to meet our best friend</p>
-      <span class="categories"><i class="fa fa-tag"></i>Evan's FriendFinder</span>
+  <div class="modal" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Success! You have been matched with <span id="responseName"></span></h5>
+        </div>
+        <div class="modal-body">
+          <img id="responseImg">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
-
-    <div class="link-box">
-      <a href="" target="_blank">Details</a>
-      <a class="popup-modal-dismiss">Close</a>
-    </div>
-
-  </div><!-- modal-01 End -->
+  </div>
 
 
   <script type="text/javascript">
+    $('#modal').modal({
+      show: false
+    })
     $("#submit").on("click", function (event) {
       event.preventDefault();
-      var answers = [q1, q2, ];
-      // Here we grab the form elements
-      var userEntry = {
-        userName: $("#user-name").val().trim(),
-        userPhoto: $("#photo-link").val().trim(),
-        userScores: answers
-        //parseInt
-      };
-      console.log(userEntry);
+      
+      let name = $("#name").val().trim();
+      let image = $("#photo").val().trim();
+      let question1 = $("input[name='question1']:checked").val();
+      let question2 = $("input[name='question2']:checked").val();
+      let question3 = $("input[name='question3']:checked").val();
+      let question4 = $("input[name='question4']:checked").val();
+      let question5 = $("input[name='question5']:checked").val();
+      let question6 = $("input[name='question6']:checked").val();
+      let question7 = $("input[name='question7']:checked").val();
+      let question8 = $("input[name='question8']:checked").val();
+      let question9 = $("input[name='question9']:checked").val();
+      let question10 = $("input[name='question10']:checked").val();
+      let newFriend = {
+        name: name,
+        photo: image,
+        scores: [question1, question2, question3, question4, question5, question6, question7, question8,
+          question9, question10
+        ]}
 
-      $.post("/api/friends", userEntry,
-        function (user) {
-
-          if (user) {
-            alert("Yay! You found a new  match"); // this is where we need the modal to pop up
-
-            $('#modal-01').modal('mfp-show')
-
-          } else {
-            alert("New user was not added.");
-          }
+        $.post("/api/friends", newFriend,
+        function(response){
+                    console.log(response)
+                    $("#responseName").html(response.name);
+                    $("#responseImg").attr("src", response.photo);
+                    $("#responseImg").height("254");
+                    $("#responseImg").width("350");
+                    $("#responseModal").modal("show");
+                    $("#submitBtn").attr('disabled', 'disabled');
+                })
+          // else {
+          //   alert("New user was not added.");
+          // }
           // Clear the form when submitting
-          $("#user-name").val("");
-          $("#photo-link").val("");
-          $("#user-scores").val("");
+          $("#user-name").val(""); $("#photo-link").val(""); $("#user-scores").val("");
 
         });
-    });
+   
   </script>
