@@ -43,6 +43,21 @@ var friends = [{
     // 5
   ],
 },
+{
+  userName: "Dan",
+  userPhoto: "", 
+  userScores: [1,
+    1
+    // 2,
+    // 2,
+    // 4,
+    // 1,
+    // 3,
+    // 2,
+    // 5,
+    // 5
+  ],
+},
 ]
 
 module.exports = friends;

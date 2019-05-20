@@ -230,7 +230,7 @@
     })
     $("#submit").on("click", function (event) {
       event.preventDefault();
-      
+
       let name = $("#name").val().trim();
       let image = $("#photo").val().trim();
       let question1 = $("input[name='question1']:checked").val();
@@ -246,26 +246,27 @@
       let newFriend = {
         userName: name,
         userPhoto: image,
-        userScores: [parseInt(question1), parseInt(question2)
-        ]}
-        // , parseInt(question3), parseInt(question4), parseInt(question5), parseInt(question6), parseInt(question7), parseInt(question8),
-        //   parseInt(question9), parseInt(question10)
-        $.post("/api/friends", newFriend,
-        function(response){
-                    console.log(response)
-                    $("#responseName").html(response.name);
-                    $("#responseImg").attr("src", response.photo);
-                    $("#responseImg").height("254");
-                    $("#responseImg").width("350");
-                    $("#modal").modal("show");
-                    $("#submit").attr('disabled', 'disabled');
-                })
-          // else {
-          //   alert("New user was not added.");
-          // }
-          // Clear the form when submitting
-          $("#user-name").val(""); $("#photo-link").val(""); $("#user-scores").val("");
+        userScores: [parseInt(question1), parseInt(question2)]
+      }
+      // , parseInt(question3), parseInt(question4), parseInt(question5), parseInt(question6), parseInt(question7), parseInt(question8),
+      //   parseInt(question9), parseInt(question10)
+      $.post("/api/friends", newFriend,
+        function (response) {
+          console.log(response)
+          $("#responseName").html(response.userName);
+          $("#responseImg").attr("src", response.userPhoto);
+          $("#responseImg").height("254");
+          $("#responseImg").width("350");
+          $("#modal").modal("show");
+          $("#submit").attr('disabled', 'disabled');
+        })
+      // else {
+      //   alert("New user was not added.");
+      // }
+      // Clear the form when submitting
+      $("#name").val("");
+      $("#photo").val("");
+      $("#user-scores").val("");
 
-        });
-   
+    });
   </script>
