@@ -75,7 +75,7 @@
         <label><input type="checkbox" name="question2" value="5">Option 5(Strongly Agree)</label>
       </div>
     </div>
-    <!-- <h5><strong>Are you influenced easily.</strong></h5>
+    <h5><strong>Are you influenced easily.</strong></h5>
     <div class="checkbox">
       <label><input type="checkbox" name="question3" value="1">Option 1(Strongly Disagree)</label>
     </div>
@@ -202,7 +202,7 @@
       <div class="checkbox">
         <label><input type="checkbox" name="question10" value="5">Option 5(Strongly Agree)</label>
       </div>
-    </div> -->
+    </div>
     <button type="button" id="submit" class="btn btn-large btn-primary">Submit</button>
 
   </div>
@@ -243,27 +243,25 @@
       let question8 = $("input[name='question8']:checked").val();
       let question9 = $("input[name='question9']:checked").val();
       let question10 = $("input[name='question10']:checked").val();
-      let newFriend = {
+      let newFriend = {  //new friend created for comparison to ones already in array
         userName: name,
         userPhoto: image,
-        userScores: [parseInt(question1), parseInt(question2)]
+        userScores: [parseInt(question1), parseInt(question2), parseInt(question3), parseInt(question4), parseInt(
+            question5), parseInt(question6), parseInt(question7), parseInt(question8),
+          parseInt(question9), parseInt(question10)
+        ] //parses strings to integers before passing them to post then sends to apiRoutes to do calculations
       }
-      // , parseInt(question3), parseInt(question4), parseInt(question5), parseInt(question6), parseInt(question7), parseInt(question8),
-      //   parseInt(question9), parseInt(question10)
+
       $.post("/api/friends", newFriend,
-        function (response) {
+        function (response) {  //gets response from apiroutes.js to get the best match usrname and user photo
           console.log(response)
           $("#responseName").html(response.userName);
           $("#responseImg").attr("src", response.userPhoto);
           $("#responseImg").height("254");
           $("#responseImg").width("350");
-          $("#modal").modal("show");
-          $("#submit").attr('disabled', 'disabled');
+          $("#modal").modal("show"); // shows modal
+          $("#submit").attr('disabled', 'disabled'); //disables submit button
         })
-      // else {
-      //   alert("New user was not added.");
-      // }
-      // Clear the form when submitting
       $("#name").val("");
       $("#photo").val("");
       $("#user-scores").val("");
